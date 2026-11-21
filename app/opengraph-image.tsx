@@ -12,7 +12,7 @@ export default function OpenGraphImage() {
         <div style={{ fontSize: 66, lineHeight: 1.08, fontWeight: 700, letterSpacing: "-3px" }}>Technology That Moves Businesses Forward.</div>
         <div style={{ fontSize: 26, color: "#66747A", marginTop: 28 }}>Websites · Custom software · Automation</div>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #DED BD3".replace(" ",""), paddingTop: 22, fontSize: 20, color: "#66747A" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #DEDBD3", paddingTop: 22, fontSize: 20, color: "#66747A" }}>
         <span>curakart.com</span><span>Thoughtful technology. Practical outcomes.</span>
       </div>
       <div style={{ position: "absolute", right: -130, top: 110, width: 360, height: 360, border: "2px solid #C77D5B", borderRadius: "50%", opacity: 0.18 }} />
