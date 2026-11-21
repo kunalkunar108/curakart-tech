@@ -86,9 +86,9 @@ export default function Home() {
     </section>
 
     <section className="agency-work">
-      <div className="wrap"><div className="agency-section-head"><div><div className="agency-section-label">04 / SELECTED WORK</div><h2>Made to solve.<br/><em>Built to matter.</em></h2></div><div className="agency-work-intro"><p>A selection of working demonstrations, internal product explorations and concepts. We label each one clearly — no invented client stories or inflated outcomes.</p><Link href="/work">View all projects <ArrowUpRight size={15}/></Link></div></div>
+      <div className="wrap"><div className="agency-section-head"><div><div className="agency-section-label">04 / SELECTED WORK</div><h2>Made to solve.<br/><em>Built to matter.</em></h2></div><div className="agency-work-intro"><p>A selection of working demonstrations, internal product explorations and concepts. We label each one clearly — no invented client stories or inflated outcomes.</p><Link href="/portfolio">View all projects <ArrowUpRight size={15}/></Link></div></div>
         <div className="agency-work-grid">{projects.map(p=><article className={`agency-project ${p.style}`} key={p.no}><div className="agency-project-visual"><div className={`project-screen ${p.visual}`}><div className="screen-bar"><b>● ● ●</b><span>{p.name.toUpperCase()}</span><i>↗</i></div><div className="screen-content"><div className="screen-line"></div><div className="screen-line short"></div><div className="screen-panels"><i></i><i></i><i></i></div><div className="screen-footer-line"></div></div></div><span className="project-no">{p.no}</span></div><div className="agency-project-copy"><div className="agency-project-type">{p.type}</div><h3>{p.name}</h3><p>{p.desc}</p><a href={p.href} target="_blank" rel="noreferrer">{p.cta} <ArrowUpRight size={15}/></a></div></article>)}</div>
-        <div className="agency-section-link"><Link href="/work">Browse the project portfolio <ArrowUpRight size={16}/></Link></div>
+        <div className="agency-section-link"><Link href="/portfolio">Browse the project portfolio <ArrowUpRight size={16}/></Link></div>
       </div>
     </section>
 
@@ -105,7 +105,7 @@ export default function Home() {
     </section>
 
     <section className="agency-approach">
-      <div className="wrap"><div className="agency-section-head"><div><div className="agency-section-label">05 / OUR APPROACH</div><h2>Useful by design.<br/><em>Thoughtful by default.</em></h2></div><p>Technology is a means to an outcome. We focus on making the solution understandable, usable and appropriate for the job it needs to do.</p></div>
+      <div className="wrap"><div className="agency-section-head"><div><div className="agency-section-label">06 / OUR APPROACH</div><h2>Useful by design.<br/><em>Thoughtful by default.</em></h2></div><p>Technology is a means to an outcome. We focus on making the solution understandable, usable and appropriate for the job it needs to do.</p></div>
         <div className="agency-approach-grid">
           <article><Search/><h3>Understand first</h3><p>We ask what is slowing the business down, what customers need and what the solution must actually achieve.</p></article>
           <article><PenTool/><h3>Design with purpose</h3><p>Structure, content and interface decisions should help people find information and complete tasks without confusion.</p></article>
@@ -116,11 +116,11 @@ export default function Home() {
     </section>
 
     <section className="agency-method">
-      <div className="wrap agency-method-grid"><div><div className="agency-section-label">06 / HOW WE WORK</div><h2>Clear thinking.<br/><em>Careful execution.</em></h2><p className="agency-method-lead">A transparent process keeps decisions, responsibilities and expectations visible from the first conversation to handover.</p><Link className="agency-dark-link" href="/process">Explore our process <ArrowUpRight size={16}/></Link></div><div className="agency-method-list">{steps.map(([n,t,d])=><div className="agency-method-step" key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div><ArrowUpRight size={16}/></div>)}</div></div>
+      <div className="wrap agency-method-grid"><div><div className="agency-section-label">07 / HOW WE WORK</div><h2>Clear thinking.<br/><em>Careful execution.</em></h2><p className="agency-method-lead">A transparent process keeps decisions, responsibilities and expectations visible from the first conversation to handover.</p><Link className="agency-dark-link" href="/process">Explore our process <ArrowUpRight size={16}/></Link></div><div className="agency-method-list">{steps.map(([n,t,d])=><div className="agency-method-step" key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div><ArrowUpRight size={16}/></div>)}</div></div>
     </section>
 
     <section className="agency-delivery">
-      <div className="wrap agency-delivery-grid"><div><div className="agency-section-label">07 / DELIVERY PRINCIPLES</div><h2>Know what you’re<br/><em>getting.</em></h2><p>Before development starts, the proposal should make the work understandable. That means knowing what is included, what depends on you and what may require a separate budget.</p></div><div className="agency-delivery-points">
+      <div className="wrap agency-delivery-grid"><div><div className="agency-section-label">08 / DELIVERY PRINCIPLES</div><h2>Know what you’re<br/><em>getting.</em></h2><p>Before development starts, the proposal should make the work understandable. That means knowing what is included, what depends on you and what may require a separate budget.</p></div><div className="agency-delivery-points">
         <div><b>01</b><span><strong>Defined scope</strong><small>Pages, features and deliverables written down before work begins.</small></span></div>
         <div><b>02</b><span><strong>Visible milestones</strong><small>Review points that make progress and decisions easier to follow.</small></span></div>
         <div><b>03</b><span><strong>Clear handover</strong><small>Agreed access, documentation and launch responsibilities.</small></span></div>
@@ -129,9 +129,9 @@ export default function Home() {
     </section>
 
     <section className="agency-faq">
-      <div className="wrap agency-faq-grid"><div><div className="agency-section-label">08 / COMMON QUESTIONS</div><h2>Good questions.<br/><em>Clear answers.</em></h2><p>Still deciding what your business needs? Start with the basics here, then tell us about your specific situation.</p><Link href="/contact" className="agency-dark-link">Ask us about your project <ArrowUpRight size={16}/></Link></div><div className="agency-faq-list">{faqs.map(([q,a])=><details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></div>
+      <div className="wrap agency-faq-grid"><div><div className="agency-section-label">09 / COMMON QUESTIONS</div><h2>Good questions.<br/><em>Clear answers.</em></h2><p>Still deciding what your business needs? Start with the basics here, then tell us about your specific situation.</p><Link href="/contact" className="agency-dark-link">Ask us about your project <ArrowUpRight size={16}/></Link></div><div className="agency-faq-list">{faqs.map(([q,a])=><details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></div>
     </section>
 
-    <section className="agency-cta"><div className="wrap agency-cta-inner"><div className="agency-section-label">09 / START A CONVERSATION</div><h2>Have a business challenge<br/>worth <em>solving?</em></h2><div className="agency-cta-bottom"><p>Tell us what you’re building, improving or trying to make simpler. We’ll clarify the requirements and discuss a practical next step.</p><Link href="/contact">Let’s discuss your project <ArrowUpRight size={17}/></Link></div></div></section>
+    <section className="agency-cta"><div className="wrap agency-cta-inner"><div className="agency-section-label">10 / START A CONVERSATION</div><h2>Have a business challenge<br/>worth <em>solving?</em></h2><div className="agency-cta-bottom"><p>Tell us what you’re building, improving or trying to make simpler. We’ll clarify the requirements and discuss a practical next step.</p><Link href="/contact">Let’s discuss your project <ArrowUpRight size={17}/></Link></div></div></section>
   </>;
 }
