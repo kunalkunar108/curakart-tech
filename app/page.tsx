@@ -47,7 +47,7 @@ export default function Home() {
           <p className="agency-hero-lead">We help businesses turn ideas and everyday operational challenges into useful digital experiences — from professional websites to custom software and connected workflows.</p>
           <div className="agency-actions">
             <Link className="agency-button" href="/contact">Start a project <ArrowUpRight size={17}/></Link>
-            <Link className="agency-text-link" href="/work">Explore our work <ArrowRight size={16}/></Link>
+            <Link className="agency-text-link" href="/portfolio">Explore our work <ArrowRight size={16}/></Link>
           </div>
           <div className="hero-proofline"><span><i/> Clear scope</span><span><i/> Thoughtful design</span><span><i/> Practical technology</span></div>
         </div>
@@ -89,6 +89,18 @@ export default function Home() {
       <div className="wrap"><div className="agency-section-head"><div><div className="agency-section-label">04 / SELECTED WORK</div><h2>Made to solve.<br/><em>Built to matter.</em></h2></div><div className="agency-work-intro"><p>A selection of working demonstrations, internal product explorations and concepts. We label each one clearly — no invented client stories or inflated outcomes.</p><Link href="/work">View all projects <ArrowUpRight size={15}/></Link></div></div>
         <div className="agency-work-grid">{projects.map(p=><article className={`agency-project ${p.style}`} key={p.no}><div className="agency-project-visual"><div className={`project-screen ${p.visual}`}><div className="screen-bar"><b>● ● ●</b><span>{p.name.toUpperCase()}</span><i>↗</i></div><div className="screen-content"><div className="screen-line"></div><div className="screen-line short"></div><div className="screen-panels"><i></i><i></i><i></i></div><div className="screen-footer-line"></div></div></div><span className="project-no">{p.no}</span></div><div className="agency-project-copy"><div className="agency-project-type">{p.type}</div><h3>{p.name}</h3><p>{p.desc}</p><a href={p.href} target="_blank" rel="noreferrer">{p.cta} <ArrowUpRight size={15}/></a></div></article>)}</div>
         <div className="agency-section-link"><Link href="/work">Browse the project portfolio <ArrowUpRight size={16}/></Link></div>
+      </div>
+    </section>
+
+    <section className="agency-technologies" id="technologies">
+      <div className="wrap">
+        <div className="agency-section-head"><div><div className="agency-section-label">05 / TECHNOLOGY LANDSCAPE</div><h2>The tools behind<br/><em>useful solutions.</em></h2></div><div className="agency-work-intro"><p>We select technologies around the product, its users and long-term needs. Not every project needs every tool.</p><Link href="/technologies">Explore our technology approach <ArrowUpRight size={15}/></Link></div></div>
+        <div className="home-tech-grid">
+          <article><span>01 / FRONTEND</span><div><b>React</b><b>Next.js</b><b>TypeScript</b><b>JavaScript</b></div></article>
+          <article><span>02 / BACKEND & DATA</span><div><b>Node.js</b><b>PostgreSQL</b><b>Supabase</b><b>REST APIs</b></div></article>
+          <article><span>03 / AI & AUTOMATION</span><div><b>OpenAI API</b><b>Workflow tools</b><b>WhatsApp links</b><b>Integrations</b></div></article>
+          <article><span>04 / DEPLOYMENT</span><div><b>Vercel</b><b>GitHub</b><b>Cloud hosting</b><b>CI workflows</b></div></article>
+        </div>
       </div>
     </section>
 
