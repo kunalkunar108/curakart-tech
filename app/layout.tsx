@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: { default: "CURAKART — Technology That Moves Businesses Forward", template: "%s | CURAKART" },
   description: "CURAKART builds thoughtful websites, custom software and automation that help businesses move forward.",
   metadataBase: new URL("https://curakart.com"),
+  alternates: { canonical: "/" },
   openGraph: {
     title: "CURAKART — Technology That Moves Businesses Forward",
     description: "Thoughtful websites, custom software and automation for ambitious businesses.",
