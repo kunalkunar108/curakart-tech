@@ -7,7 +7,7 @@ const steps=[
 ["04","Test and prepare","We review the agreed experience across relevant devices, address identified issues and prepare the launch or handover.","A checked release or handover."],
 ["05","Support and improve","If ongoing help is needed, we can define a separate support or improvement arrangement based on the product and its needs.","A clear next-step support plan."]
 ];
-export default function Process(){return <main className="inner-page">
+export default function Process(){return <div className="inner-page">
 <section className="inner-hero"><div className="wrap"><div className="eyebrow">OUR APPROACH / DELIVERY</div><h1>Clear steps. Shared expectations. <em>No guesswork.</em></h1><p>A good project is not just about the final screen or feature. It is also about making decisions, responsibilities and progress clear along the way.</p></div></section>
 <section className="inner-section"><div className="wrap"><div className="section-heading"><div><div className="eyebrow">FROM FIRST CALL TO HANDOVER</div><h2>A practical five-step process.</h2></div><p>Project timelines depend on scope, content readiness, feedback cycles and third-party dependencies.</p></div><div className="process-timeline">{steps.map(([n,t,d,o])=><article className="process-step" key={n}><div className="process-step-index">{n}</div><div className="process-step-main"><h3>{t}</h3><p>{d}</p></div><div className="process-outcome"><span>YOU CAN EXPECT</span><p>{o}</p></div></article>)}</div></div></section>
 <section className="inner-cta"><div className="wrap"><div className="eyebrow">READY TO BEGIN?</div><h2>Start with a conversation, not a complicated brief.</h2><Link className="btn" href="/contact">Tell us about your project ↗</Link></div></section>
