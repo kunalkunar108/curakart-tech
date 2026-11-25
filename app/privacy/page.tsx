@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Privacy policy" };
+export const metadata: Metadata = { title: "Privacy policy", description: "Read how CURAKART handles information shared through website enquiries, WhatsApp and email.", alternates: { canonical: "/privacy" } };
 
 export default function Privacy() {
   return (
