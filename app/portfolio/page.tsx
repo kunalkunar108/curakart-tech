@@ -1,5 +1,5 @@
 import type { Metadata } from "next"; import Link from "next/link";
-export const metadata:Metadata={title:"Portfolio",description:"Explore CURAKART's internal product demonstrations, website concepts and software previews."};
+export const metadata:Metadata={title:"Portfolio",description:"Explore CURAKART's internal product demonstrations, website concepts and software previews.",alternates:{canonical:"/portfolio"}};
 const projects=[
 {name:"GymDesk",type:"GYM OPERATIONS / INTERNAL PRODUCT DEMO",desc:"A gym management product demo exploring member records, attendance and everyday gym operations.",url:"https://gym-managment-software-ecru.vercel.app/",status:"Internal product demo",mark:"GD",tone:"work-dark"},
 {name:"LAKSHYA 07",type:"EDUCATION / INSTITUTE WEBSITE DEMONSTRATION",desc:"A computer institute website demonstration with course information, admission enquiries and student-facing pages.",url:"https://lakshya-07.vercel.app/",status:"Website demonstration",mark:"L7",tone:""},
