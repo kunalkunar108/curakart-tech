@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CURAKART — Technology That Moves Businesses Forward",
     description: "Thoughtful websites, custom software and automation for ambitious businesses.",
-    images: ["/opengraph-image"],
+    images: ["/twitter-image"],
   },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
