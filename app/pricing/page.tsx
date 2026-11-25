@@ -1,5 +1,5 @@
 import type { Metadata } from "next"; import Link from "next/link";
-export const metadata:Metadata={title:"Pricing"};
+export const metadata:Metadata={title:"Pricing",description:"Explore indicative CURAKART website pricing and understand what affects the final scope, estimate and project costs.",alternates:{canonical:"/pricing"}};
 const plans=[
 {n:"Starter website",who:"A focused online presence",d:"For a business that needs a clear, professional place to explain its offer and receive enquiries.",features:["Up to 5 agreed pages","Responsive layout","Contact or enquiry pathway","Basic on-page SEO setup","One revision round per milestone"],price:"₹15,000 – ₹20,000",note:"Indicative range"},
 {n:"Business website",who:"A more complete digital presence",d:"For a business that needs more depth, tailored sections and a stronger content structure.",features:["Up to 10 agreed pages","Custom visual direction","Enquiry form integration","Basic on-page SEO setup","Two revision rounds per milestone"],price:"₹25,000 – ₹40,000",note:"Indicative range"},
