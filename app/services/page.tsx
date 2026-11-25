@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, PanelsTopLeft, Code2, Workflow, Smartphone, PenTool, Gauge, Database, Headset } from "lucide-react";
-export const metadata:Metadata={title:"Services",description:"Explore CURAKART services: web design and development, custom software, web applications, UI/UX, automation and website care."};
+export const metadata:Metadata={title:"Services",description:"Explore CURAKART services: web design and development, custom software, web applications, UI/UX, automation and website care.",alternates:{canonical:"/services"}};
 const services=[
 {n:"01",slug:"website-design-development",t:"Website design & development",d:"A clear, credible website helps the right people understand your business and take the next step.",b:["Business and company websites","Landing pages and campaign pages","Website redesigns","Contact and enquiry journeys"],icon:PanelsTopLeft},
 {n:"02",slug:"custom-software-development",t:"Custom software development",d:"Purpose-built software for business processes that are difficult to manage across spreadsheets or disconnected tools.",b:["Management systems and dashboards","Student, member and customer records","Role-based portals and workflows","Operational reporting interfaces"],icon:Code2},
