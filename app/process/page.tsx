@@ -1,5 +1,5 @@
 import type { Metadata } from "next"; import Link from "next/link";
-export const metadata:Metadata={title:"Our process"};
+export const metadata:Metadata={title:"Our process",description:"See how CURAKART takes digital projects from discovery and scope definition through design, development, testing and handover.",alternates:{canonical:"/process"}};
 const steps=[
 ["01","Understand the context","We discuss your business, audience, current tools and the challenge you want to solve. We identify the most important outcome before recommending a direction.","A shared understanding of the problem."],
 ["02","Define the scope","We outline deliverables, exclusions, milestones, responsibilities and commercial terms. You know what is included before work begins.","A written scope and proposal."],
