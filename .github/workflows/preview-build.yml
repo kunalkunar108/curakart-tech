@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -23,6 +23,18 @@ jobs:
 
       - name: Install dependencies and generate lockfile
         run: npm install
+
+      - name: Commit generated lockfile
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Add reproducible dependency lockfile"
+            git push
+          else
+            echo "package-lock.json is already up to date"
+          fi
 
       - name: Capture npm security audit
         run: npm audit --json > npm-audit.json || true
