@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
@@ -20,34 +20,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
-      - name: Install dependencies and generate lockfile
-        run: npm install
+      - name: Install locked dependencies
+        run: npm ci
 
-      - name: Commit generated lockfile
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package-lock.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Add reproducible dependency lockfile"
-            git push
-          else
-            echo "package-lock.json is already up to date"
-          fi
-
-      - name: Capture npm security audit
-        run: npm audit --json > npm-audit.json || true
+      - name: Check dependency vulnerabilities
+        run: npm audit --audit-level=high
 
       - name: Run production build
         run: npm run build
-
-      - name: Save lockfile and audit report
-        uses: actions/upload-artifact@v4
-        with:
-          name: curakart-build-diagnostics
-          path: |
-            package-lock.json
-            npm-audit.json
-          if-no-files-found: error
-          retention-days: 7
