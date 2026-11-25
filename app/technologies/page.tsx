@@ -1,5 +1,5 @@
 import type { Metadata } from "next"; import Link from "next/link";
-export const metadata:Metadata={title:"Technologies",description:"Explore the technologies and platforms CURAKART uses across websites, web applications, databases, automation and deployment."};
+export const metadata:Metadata={title:"Technologies",description:"Explore the technologies and platforms CURAKART uses across websites, web applications, databases, automation and deployment.",alternates:{canonical:"/technologies"}};
 const groups=[
 {title:"FRONTEND & EXPERIENCE",desc:"Interactive interfaces and responsive web experiences.",tools:["React","Next.js","TypeScript","JavaScript","HTML & CSS"]},
 {title:"BACKEND & APPLICATIONS",desc:"Application logic, APIs and integrations shaped around the product.",tools:["Node.js","REST APIs","Server-side applications","Authentication & roles"]},
