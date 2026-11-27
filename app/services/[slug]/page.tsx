@@ -214,10 +214,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const service = services.find((item) => item.slug === slug);
   if (!service) return { title: "Service not found" };
+  const isWebApplication = slug === "web-application-development";
+  const seoTitle = isWebApplication ? "Web Application Development Company in Jharkhand | CURAKART" : `${service.title} | CURAKART`;
+  const seoDescription = isWebApplication ? "CURAKART plans and develops responsive web applications for businesses across Jharkhand, including customer portals, dashboards, internal tools and MVPs." : service.summary;
   return {
-    title: service.title,
-    description: service.summary,
-    openGraph: { title: `${service.title} | CURAKART`, description: service.summary },
+    title: seoTitle,
+    description: seoDescription,
+    openGraph: { title: seoTitle, description: seoDescription, url: `https://curakart.com/services/${slug}` },
     alternates: { canonical: `/services/${slug}` }
   };
 }
@@ -227,8 +230,37 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const service = services.find((item) => item.slug === slug);
   if (!service) notFound();
 
+  const structuredData = slug === "web-application-development" ? {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://curakart.com/services/web-application-development#service",
+        "name": "Web Application Development",
+        "serviceType": "Web application design and development",
+        "url": "https://curakart.com/services/web-application-development",
+        "description": "CURAKART plans and develops responsive web applications for businesses across Jharkhand, including customer portals, dashboards, internal tools and MVPs.",
+        "provider": { "@id": "https://curakart.com/#organization" },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Jharkhand" },
+          { "@type": "Country", "name": "India" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://curakart.com/services/web-application-development#faq",
+        "mainEntity": service.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+        }))
+      }
+    ]
+  } : null;
+
   return (
     <div className="service-page">
+      {structuredData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />}
       <section className="service-page-hero">
         <div className="wrap">
           <Link href="/services" className="service-back"><ArrowLeft size={15} /> All services</Link>
