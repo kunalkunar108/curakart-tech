@@ -215,7 +215,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const service = services.find((item) => item.slug === slug);
   if (!service) return { title: "Service not found" };
   const isWebApplication = slug === "web-application-development";
-  const seoTitle = isWebApplication ? "Web Application Development Company in Jharkhand | CURAKART" : `${service.title} | CURAKART`;
+  const seoTitle = isWebApplication ? "Web Application Development Company in Jharkhand" : `${service.title} | CURAKART`;
   const seoDescription = isWebApplication ? "CURAKART plans and develops responsive web applications for businesses across Jharkhand, including customer portals, dashboards, internal tools and MVPs." : service.summary;
   return {
     title: seoTitle,
