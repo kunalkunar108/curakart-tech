@@ -221,6 +221,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: seoTitle,
     description: seoDescription,
     openGraph: { title: seoTitle, description: seoDescription, url: `https://curakart.com/services/${slug}` },
+    twitter: {
+      card: "summary_large_image",
+      title: seoTitle,
+      description: seoDescription,
+      images: [{ url: "https://curakart.com/twitter-image", width: 1200, height: 630, alt: seoTitle }]
+    },
     alternates: { canonical: `/services/${slug}` }
   };
 }
