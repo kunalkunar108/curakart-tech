@@ -35,7 +35,7 @@ const faqs = [
   ["Can we start with a smaller first version?", "Where appropriate, the project can be divided into phases. A first release should solve a clearly defined problem while leaving a sensible path for later improvements."],
   ["Does CURAKART work outside Dumka?", "Yes. CURAKART works with businesses across Jharkhand, including Ranchi, Jamshedpur, Dhanbad, Bokaro, Deoghar, Dumka, Hazaribagh and other districts. Projects are generally coordinated online."],
   ["What happens after the software is delivered?", "The proposal should define testing, deployment, documentation, access handover, warranty or bug-fix terms and any optional ongoing maintenance or support."],
-];
+] as const;
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -54,7 +54,7 @@ const solutions = [
   ["04", "Workflow and record tools", "Replace disconnected manual steps with a process designed around your actual operations.", ["Enquiry and lead tracking", "Approvals and follow-up stages", "Centralised records and history"]],
   ["05", "Industry-specific applications", "Build around the requirements of a particular business model or service.", ["Education and institute workflows", "Retail and service operations", "Hospitality and appointment processes"]],
   ["06", "Integrations and reporting", "Connect the agreed systems and present information in a usable way.", ["Third-party API integrations", "Notifications and communication flows", "Management reporting"]],
-];
+] as const;
 
 export default function CustomSoftwareDevelopmentPage() {
   return (
